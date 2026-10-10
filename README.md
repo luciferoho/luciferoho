@@ -41,21 +41,10 @@
 <img width="100%" src="assets/divider.svg" alt="" />
 
 <p align="center">
-  <a href="https://github.com/luciferoho/inkbox">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=luciferoho&repo=inkbox&hide_border=false&border_color=1F2937&bg_color=0A0E14&title_color=4ADE80&text_color=9CA3AF" alt="inkbox" />
-  </a>
-  <a href="https://github.com/luciferoho/fta-model-demo">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=luciferoho&repo=fta-model-demo&hide_border=false&border_color=1F2937&bg_color=0A0E14&title_color=4ADE80&text_color=9CA3AF" alt="fta-model-demo" />
-  </a>
-</p>
-
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/luciferoho/luciferoho/output/github-contribution-grid-snake-dark.svg" />
     <img width="900" src="https://raw.githubusercontent.com/luciferoho/luciferoho/output/github-contribution-grid-snake-dark.svg" alt="contribution snake" />
   </picture>
 </p>
-
-> 🐍 蛇由 GitHub Actions 每天自动投喂（首跑见 SETUP.md 第 3 步），啃食的是你的贡献格子。
 
 <img width="100%" src="assets/footer.svg" alt="" />
