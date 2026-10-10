@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300">
+  <style>
+    .cursor { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+    .scan { animation: scan 5.5s linear infinite; }
+    @keyframes scan { 0% { transform: translateY(-60px); } 100% { transform: translateY(340px); } }
+    .neon { animation: neon 2.6s ease-in-out infinite; }
+    @keyframes neon { 0%, 100% { opacity: 0.72; } 50% { opacity: 1; } }
+    .rain { animation: fall 14s linear infinite; }
+    .rain2 { animation: fall 14s linear infinite; animation-delay: -7s; }
+    @keyframes fall { 0% { transform: translateY(-300px); } 100% { transform: translateY(300px); } }
+    text { font-family: 'JetBrains Mono','Fira Code','Cascadia Code',Consolas,'Courier New',monospace; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070B10"/>
+      <stop offset="1" stop-color="#0D141C"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#16A34A"/>
+      <stop offset="1" stop-color="#4ADE80"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#22C55E" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="win">
+      <rect x="1" y="1" width="1278" height="298" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="1278" height="298" rx="12" fill="url(#bg)" stroke="#1F2937" stroke-width="2"/>
+
+  <g clip-path="url(#win)">
+    <!-- 背景：二进制雨（右侧，低透明度） -->
+    <g class="rain" fill="#22C55E" font-size="15" opacity="0.14">
+      <text x="1070" y="20">10110</text><text x="1070" y="46">01001</text><text x="1070" y="72">11010</text><text x="1070" y="98">00101</text><text x="1070" y="124">10011</text><text x="1070" y="150">01110</text><text x="1070" y="176">10101</text><text x="1070" y="202">01011</text><text x="1070" y="228">11001</text><text x="1070" y="254">00110</text><text x="1070" y="280">10110</text>
+    </g>
+    <g class="rain2" fill="#22C55E" font-size="15" opacity="0.10">
+      <text x="1150" y="20">01101</text><text x="1150" y="46">10010</text><text x="1150" y="72">01011</text><text x="1150" y="98">11010</text><text x="1150" y="124">00101</text><text x="1150" y="150">10110</text><text x="1150" y="176">01101</text><text x="1150" y="202">10011</text><text x="1150" y="228">01001</text><text x="1150" y="254">11010</text><text x="1150" y="280">00101</text>
+    </g>
+    <g class="rain2" fill="#22C55E" font-size="15" opacity="0.08">
+      <text x="1226" y="20">11001</text><text x="1226" y="46">00110</text><text x="1226" y="72">10101</text><text x="1226" y="98">01011</text><text x="1226" y="124">10011</text><text x="1226" y="150">01101</text><text x="1226" y="176">11010</text><text x="1226" y="202">00101</text><text x="1226" y="228">10110</text><text x="1226" y="254">01001</text><text x="1226" y="280">10011</text>
+    </g>
+
+    <!-- CRT 扫描线 -->
+    <rect class="scan" x="0" y="0" width="1280" height="34" fill="#4ADE80" opacity="0.05"/>
+
+    <!-- 标题栏 -->
+    <rect x="1" y="1" width="1278" height="36" fill="#0F1420"/>
+    <line x1="1" y1="37" x2="1279" y2="37" stroke="#1F2937" stroke-width="1"/>
+    <circle cx="26" cy="19" r="6" fill="#FF5F56"/>
+    <circle cx="48" cy="19" r="6" fill="#FFBD2E"/>
+    <circle cx="70" cy="19" r="6" fill="#27C93F"/>
+    <text x="640" y="24" text-anchor="middle" font-size="13" fill="#56606E" letter-spacing="1">lucifer@github: ~</text>
+  </g>
+
+  <!-- 内容 -->
+  <text x="48" y="86" font-size="20" fill="#2E7D4F">$ whoami</text>
+
+  <g class="neon" filter="url(#neonGlow)">
+    <text x="48" y="150" font-size="56" font-weight="bold" fill="#E8F5EC">Lucifer</text>
+  </g>
+  <rect class="cursor" x="306" y="106" width="26" height="54" fill="#4ADE80"/>
+
+  <text x="48" y="196" font-size="20" fill="#2E7D4F">$ cat stack.txt</text>
+  <text x="48" y="230" font-size="20" fill="#8B949E">TypeScript · Vue 3 · Electron · Node.js · Markdown</text>
+
+  <text x="48" y="272" font-size="18" fill="#56606E">$ ./inkbox --serve</text>
+  <rect x="310" y="258" width="560" height="14" rx="7" fill="#141B24"/>
+  <rect x="310" y="258" width="6" height="14" rx="3" fill="url(#bar)">
+    <animate attributeName="width" values="0;403;403" keyTimes="0;0.75;1" dur="4.2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="888" y="272" font-size="18" fill="#4ADE80">72%</text>
+  <text x="960" y="272" font-size="18" fill="#3A4350">[pid 1337]</text>
+</svg>
